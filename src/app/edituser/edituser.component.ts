@@ -23,6 +23,8 @@ ngOnInit(): void {
 updateuser(id:any,data:any) {
   this.crud.edituser(id,data).subscribe(res =>{
     this.router.navigate(['/list']);
+  },(error:any)=>{
+    console.log("Error", error);
   });
 }
 }

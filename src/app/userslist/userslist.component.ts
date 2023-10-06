@@ -25,7 +25,9 @@ export class UserslistComponent implements OnInit {
       this.crud.deleteUser(id).subscribe((data: any) => {
         this.fetchusers();
       }
-      );
+      ),(error:any)=>{
+        console.log("Error", error);
+      };
     }
   }
 }
