@@ -1,0 +1,27 @@
+<div class="container">
+    <button class="btn btn-primary mt-5" routerLink="/add">Add User</button>
+    <h2 class="text-center mb-3" >Users List</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phoneno</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of user">
+                <td>{{u.id}}</td>
+                <td>{{u.name}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.phoneno}}</td>
+                <td>
+                <span><button class="btn btn-sm btn-info" routerLink="/edit/{{u.id}}">Edit User</button></span>&nbsp;
+                <span><button class="btn btn-danger btn-sm" (click)="deleteuser(u.id)">Delete User</button></span>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

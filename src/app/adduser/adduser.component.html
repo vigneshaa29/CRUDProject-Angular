@@ -1,0 +1,20 @@
+<div class="container" style="max-width:500px">
+    <h3 class="text-center mt-5 mb-3">Add User</h3>
+
+    <div class="my-3">
+        <input type="text" value="{{userrole.name}}" placeholder="name" class="form-control" [(ngModel)]="userrole.name">
+    </div>
+
+    <div class="my-3">
+        <input type="email" value="{{userrole.email}}" placeholder="email" class="form-control" [(ngModel)]="userrole.email">
+    </div>
+
+    <div class="my-3">
+        <input type="text" value="{{userrole.phoneno}}" placeholder="phoneno" class="form-control" [(ngModel)]="userrole.phoneno">
+    </div>
+
+    <div class="my-3">
+        <button class="btn btn-primary" (click)="storedata()" >Add User</button>&nbsp;
+        <button class="btn btn-info" routerLink="/list">Users List</button>
+    </div>
+</div>
